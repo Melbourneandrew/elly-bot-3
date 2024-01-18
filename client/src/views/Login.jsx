@@ -10,7 +10,7 @@ export default function Login() {
       alert("Please enter a username and password");
       return;
     }
-
+    console.log("submitting login...");
     const loginRes = await fetch("/api/login", {
       method: "POST",
       body: JSON.stringify({ username, password }),
@@ -19,6 +19,7 @@ export default function Login() {
       },
     });
     if (loginRes.status == 200) {
+      console.log("login successful");
       navigate("/admin");
     } else {
       alert("Login failed");
