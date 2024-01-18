@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import jwt from "jsonwebtoken";
+import * as jwt from "jsonwebtoken";
 import { compare } from "bcrypt";
 import { IUser, User } from "../models/User";
 const TOKEN_HASH = process.env.JWT_SECRET || "";
