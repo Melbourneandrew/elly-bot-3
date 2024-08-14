@@ -1,5 +1,5 @@
 import { pineconeClient } from "../pcone";
-import { QueryResponse } from "@pinecone-database/pinecone/dist/pinecone-generated-ts-fetch";
+import { QueryResponse } from "@pinecone-database/pinecone";
 import { OpenAI } from "openai";
 const PINECONE_INDEX_NAME: string =
   process.env.PINECONE_INDEX_NAME || "";

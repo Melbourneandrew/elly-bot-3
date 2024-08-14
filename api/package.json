@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@pinecone-database/pinecone": "^1.1.2",
+    "@pinecone-database/pinecone": "^3.0.0",
     "axios": "^1.6.2",
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",
@@ -19,9 +19,11 @@
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "install": "^0.13.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.0.3",
     "nodemon": "^3.0.2",
+    "npm": "^10.8.2",
     "openai": "^4.24.1",
     "twilio": "^4.20.0"
   },

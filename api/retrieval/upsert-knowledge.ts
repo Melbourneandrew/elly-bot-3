@@ -1,7 +1,6 @@
+import { Pinecone } from "@pinecone-database/pinecone";
 import { pineconeClient } from "../pcone";
-import { QueryResponse } from "@pinecone-database/pinecone/dist/pinecone-generated-ts-fetch";
 import { OpenAI } from "openai";
-import { DescribeIndexStatsResponse } from "@pinecone-database/pinecone/dist/pinecone-generated-ts-fetch/models/DescribeIndexStatsResponse";
 
 const PINECONE_INDEX_NAME: string =
   process.env.PINECONE_INDEX_NAME || "";
@@ -33,6 +32,7 @@ export async function storeKnowledge(knowledgeText: string) {
     PINECONE_INDEX_NAME
   );
   //Clear all vectors pinecone index
+  // (new Pinecone).index(PINECONE_INDEX_NAME).namespace(PINECONE_NAMESPACE).deleteAll();
   await pineconeIndex.namespace(PINECONE_NAMESPACE).deleteAll();
 
   console.log(
